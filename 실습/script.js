@@ -11,3 +11,28 @@
 
   	mousedown mouseup 이벤트 사용하면 됩니다.
 */
+
+$('.sunban li img').on('click', function(){
+	$(this).fadeOut();
+});
+
+let index = 11;
+
+$('.gun').on('click', function(){
+	$('.sunban li img').eq(index).fadeOut();
+	index--;
+});
+
+$('.money li').on('click', function(){
+	$('.sunban li img').fadeIn();
+	$(this).fadeOut();
+	index = 11;
+});
+
+$('.sunban li img').on('mousedown', function(){
+	$('.gun').css('background-position', 'bottom');
+});
+
+$('.sunban li img').on('mouseup', function(){
+	$('.gun').css('background-position', 'top');
+});

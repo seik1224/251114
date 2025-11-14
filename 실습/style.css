@@ -37,6 +37,19 @@ body {
 /*
 	이미지 6개씩 위 아래로 images/sunban.png 위에 배치해보세요.
 */
+.sunban {
+  height: 150px;
+  background-image: url('images/sunban.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  display:flex;
+}
+
+.sunban li {
+  cursor: pointer;
+  width: 128px;
+  height: 128px;
+}
 
 .money li {
   cursor: pointer;
@@ -53,4 +66,5 @@ body {
 	active 가상클래스 : CSS에서 특정 요소가 사용자 상호작용에 의해 "활성화"된 상태
 */
 .gun:active {
+  background-position: bottom !important;
 }
