@@ -13,3 +13,17 @@
 
 	6. this를 활용하면 전체 코드를 10줄미만으로 작성가능합니다. 코드를 간략하게 만들어보세요.
 */
+
+$('.tt').on('click', function(){
+	const me = $(this).children('h2');
+	const bro = $(this).siblings().children('h2');
+
+	me.addClass('open');
+	bro.removeClass('open');
+
+	me.next().slideDown();
+	bro.next().slideUp();
+
+	me.prev().fadeIn();
+	bro.prev().fadeOut();
+});
